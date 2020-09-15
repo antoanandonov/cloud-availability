@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "service-props.encKey",
+      "type": "java.lang.String",
+      "description": "Description for service-props.encKey."
+    },
+    {
+      "name": "service-props.encVec",
+      "type": "java.lang.String",
+      "description": "Description for service-props.encVec."
+    }
+  ] }

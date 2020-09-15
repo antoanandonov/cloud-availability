@@ -1,0 +1,54 @@
+{
+  "properties": [
+    {
+      "name": "app-props.serviceUrlForRegistration",
+      "type": "java.lang.String",
+      "description": "Description for app-props.serviceUrlForRegistration."
+    },
+    {
+      "name": "app-props.appName",
+      "type": "java.lang.String",
+      "description": "Description for app-props.appName."
+    },
+    {
+      "name": "app-props.appUri",
+      "type": "java.lang.String",
+      "description": "Description for app-props.appUri."
+    },
+    {
+      "name": "app-props.api",
+      "type": "java.lang.String",
+      "description": "Description for app-props.api."
+    },
+    {
+      "name": "app-props.org",
+      "type": "java.lang.String",
+      "description": "Description for app-props.org."
+    },
+    {
+      "name": "app-props.space",
+      "type": "java.lang.String",
+      "description": "Description for app-props.space."
+    },
+    {
+      "name": "app-props.user",
+      "type": "java.lang.String",
+      "description": "Description for app-props.user."
+    },
+    {
+      "name": "app-props.pass",
+      "type": "java.lang.String",
+      "description": "Description for app-props.pass."
+    },
+    {
+      "name": "app-props.encKey",
+      "type": "java.lang.String",
+      "description": "Description for app-props.encKey."
+    },
+    {
+      "name": "app-props.encVec",
+      "type": "java.lang.String",
+      "description": "Description for app-props.encVec."
+    }
+  ]
+}

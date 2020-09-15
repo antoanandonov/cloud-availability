@@ -1,0 +1,8 @@
+---
+applications:
+  - name: cloud-availability-watcher
+    path: /Users/i333862/IdeaProjects/cloud-availability/cloud-availability-watcher/target/cloud-availability-watcher.war
+    instances: 2
+    memory: 2G
+    disk_quota: 2G
+    health-check-type: process

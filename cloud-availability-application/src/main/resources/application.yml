@@ -1,0 +1,25 @@
+---
+
+server:
+  port: ${port:8083}
+
+# Spring config
+spring:
+  gson:
+    serialize-nulls: false
+    exclude-fields-without-expose-annotation: true
+  http:
+    converters:
+      preferred-json-mapper: gson
+
+app-props:
+  serviceUrlForRegistration: https://cloud-availability-service.cfapps.eu10.hana.ondemand.com/service/api/v1/callbacks
+  appName: ${vcap.application.application_name}
+  appUri: ${vcap.application.application_uris[0]}
+  api: ${vcap.application.cf_api}
+  org: ${vcap.application.organization_name}
+  space: ${vcap.application.space_name}
+  user: ${cfUser}
+  pass: ${cfPass}
+  encKey: ${encKey}
+  encVec: ${encVec}

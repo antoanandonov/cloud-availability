@@ -1,0 +1,8 @@
+---
+applications:
+  - name: cloud-availability-application
+    path: /Users/i333862/IdeaProjects/cloud-availability/cloud-availability-application/target/cloud-availability-application.war
+    instances: 1
+    memory: 1G
+    disk_quota: 1G
+    health-check-type: process

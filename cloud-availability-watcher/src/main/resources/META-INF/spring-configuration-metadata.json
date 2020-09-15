@@ -1,0 +1,48 @@
+{
+  "properties": [
+    {
+      "name": "cloud-foundry.appName",
+      "type": "java.lang.String",
+      "description": "Description for cloud-foundry.appName."
+    },
+    {
+      "name": "cloud-foundry.appUri",
+      "type": "java.lang.String",
+      "description": "Description for cloud-foundry.appUri."
+    },
+    {
+      "name": "cloud-foundry.api",
+      "type": "java.lang.String",
+      "description": "Description for cloud-foundry.api."
+    },
+    {
+      "name": "cloud-foundry.org",
+      "type": "java.lang.String",
+      "description": "Description for cloud-foundry.org."
+    },
+    {
+      "name": "cloud-foundry.space",
+      "type": "java.lang.String",
+      "description": "Description for cloud-foundry.space."
+    },
+    {
+      "name": "cloud-foundry.user",
+      "type": "java.lang.String",
+      "description": "Description for cloud-foundry.user."
+    },
+    {
+      "name": "cloud-foundry.pass",
+      "type": "java.lang.String",
+      "description": "Description for cloud-foundry.pass."
+    },
+    {
+      "name": "cloud-foundry.encKey",
+      "type": "java.lang.String",
+      "description": "Description for cloud-foundry.encKey."
+    },
+    {
+      "name": "cloud-foundry.encVec",
+      "type": "java.lang.String",
+      "description": "Description for cloud-foundry.encVec."
+    }
+  ] }

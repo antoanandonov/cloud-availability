@@ -1,0 +1,62 @@
+h1, h2, h3, h4, h5, h6, p, a, ul, li, code, th, tr, td, img, div {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+::selection {
+  color: whitesmoke;
+  background-color: rgba(83, 177, 28, 0.5);
+}
+
+header {
+  font-family: Menlo, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34 !important;
+}
+
+body {
+  font-size: calc(1.3vmin) !important;
+  font-family: Menlo, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34 !important;
+}
+
+a {
+  color: #6c757d;
+}
+
+a:hover, #coppyToClipboard:hover, #unscheduleCallback:hover {
+  color: rgb(241, 168, 73) !important;
+  text-decoration: none !important;
+}
+
+.btn:hover {
+  color: inherit !important;
+}
+
+code {
+  font-family:  Monaco, source-code-pro, Menlo, Consolas, 'Courier New',
+    monospace;
+}
+
+.transparent {
+  background-color: transparent !important;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.primaryColor {
+  color: rgb(83, 177, 28) !important;
+}
