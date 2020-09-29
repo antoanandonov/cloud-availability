@@ -65,7 +65,6 @@ export default class Register extends Component {
         event.target.password.value = '';
 
         await axios.post(`https://cloud-availability-service.cfapps.eu10.hana.ondemand.com/service/api/v1/encrypt`, data.credentials.password)
-        // await axios.post(`http://localhost:8081/service/api/v1/encrypt`, data.credentials.password)
             .then(res => {
                 data.credentials.password = res.data;
             });
@@ -77,7 +76,6 @@ export default class Register extends Component {
         };
 
         await axios.post(`https://cloud-availability-service.cfapps.eu10.hana.ondemand.com/service/api/v1/callbacksUi`, data, config)
-        // await axios.post(`http://localhost:8081/service/api/v1/callbacksUi`, data, config)
             .then(res => {
                 this.setState({ showAlert: true, pingUrl: '', quota: {}, credentials: {} })
             })
