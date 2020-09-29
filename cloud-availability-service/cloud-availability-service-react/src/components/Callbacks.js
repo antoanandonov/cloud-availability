@@ -31,7 +31,7 @@ export default class Callbacks extends Component {
                     <tbody className="border-top border-dark">
                     {
                         callbacks.filter(Boolean).map((callback, i) => {
-                            return (<Callback key={callback.callbackId} {...callback} index={i + 1}/>);
+                            return (<Callback key={callback.callbackId} {...callback}  index={i + 1}/>);
                         })
                     }
                     </tbody>

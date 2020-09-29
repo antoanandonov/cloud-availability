@@ -41,6 +41,8 @@ export default class Register extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault();
+        // event.stopPropagation();
+        // const state = this.state;
 
         let data = {
             pingUrl: event.target.pingUrl.value,
@@ -63,6 +65,7 @@ export default class Register extends Component {
         event.target.password.value = '';
 
         await axios.post(`https://cloud-availability-service.cfapps.eu10.hana.ondemand.com/service/api/v1/encrypt`, data.credentials.password)
+        // await axios.post(`http://localhost:8081/service/api/v1/encrypt`, data.credentials.password)
             .then(res => {
                 data.credentials.password = res.data;
             });
@@ -74,19 +77,17 @@ export default class Register extends Component {
         };
 
         await axios.post(`https://cloud-availability-service.cfapps.eu10.hana.ondemand.com/service/api/v1/callbacksUi`, data, config)
+        // await axios.post(`http://localhost:8081/service/api/v1/callbacksUi`, data, config)
             .then(res => {
                 this.setState({ showAlert: true, pingUrl: '', quota: {}, credentials: {} })
             })
             .catch(error => {
-                console.log(error.response.data);
-                let err = error.response.data;
-
                 this.setState({
                     showAlert: true,
                     error: {
-                        statusCode: err.status + ' - ' + err.error,
-                        message: err.message,
-                        timestamp: err.timestamp
+                        statusCode: error.response.status + ' - ' + error.response.statusText,
+                        message: error.response.data,
+                        timestamp: new Date().toLocaleString()
                     }
                 });
 

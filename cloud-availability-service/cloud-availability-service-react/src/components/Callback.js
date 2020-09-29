@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Accordion, Button, Card} from 'react-bootstrap';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import {IoIosCopy} from 'react-icons/io';
+import {MdDelete} from 'react-icons/md';
+import axios from 'axios';
 
 export default class Callback extends Component {
 
@@ -47,6 +49,16 @@ export default class Callback extends Component {
         }
     };
 
+    handleSubmit = async (event) => {
+        event.preventDefault();
+        const {callbackId} = this.props;
+
+        await axios.delete(`https://cloud-availability-service.cfapps.eu10.hana.ondemand.com/service/api/v1/callbacks/` + callbackId)
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
     render() {
         const {index, callbackId, pingUrl, quota, healthStatus} = this.props;
         return (
@@ -64,6 +76,7 @@ export default class Callback extends Component {
                                 <CopyToClipboard text={callbackId}>
                                     <Button id='coppyToClipboard' size="lg" variant="link"><IoIosCopy/></Button>
                                 </CopyToClipboard>
+                                <Button variant="link" size="lg" type="submit" onClick={this.handleSubmit}><MdDelete id='unscheduleCallback' className='text-danger'/></Button>
                             </Card.Header>
                             <Accordion.Collapse eventKey={index}>
                                 <Card.Body className='align-items-center align-middle'>
