@@ -64,15 +64,15 @@ public final class CloudFoundryCli {
 
     private static final class Pattern {
 
-        private static final String LOGIN = "./cf login -a {0} -u {1} -p {2} -o {3} -s {4}"; // $0 - url, $1 - username, $2 - password, $3 - organisation, $4 - space
-        private static final String PUSH = "./cf push {0} -i {1} -k {2} -m {3} -u {4} -p {5} --no-manifest --no-start"; // $0 - application name, $1 - No. instances, $2 - disk quota, $3 - memory, $4 - healthcheck type, $5 - war path
-        private static final String PUSH_WITH_MANIFEST = "./cf push -f {0}"; // $0 - manifest.yml path
-        private static final String START = "./cf start {0}"; // $0 - application name
-        private static final String RESTART = "./cf restart {0}"; // $0 - application name
-        private static final String SCALE = "./cf scale {0} -i {1}"; // $0 - application name, $1 - No. instances
+        private static final String LOGIN = "../cf login -a {0} -u {1} -p {2} -o {3} -s {4}"; // $0 - url, $1 - username, $2 - password, $3 - organisation, $4 - space
+        private static final String PUSH = "../cf push {0} -i {1} -k {2} -m {3} -u {4} -p {5} --no-manifest --no-start"; // $0 - application name, $1 - No. instances, $2 - disk quota, $3 - memory, $4 - healthcheck type, $5 - war path
+        private static final String PUSH_WITH_MANIFEST = "../cf push -f {0}"; // $0 - manifest.yml path
+        private static final String START = "../cf start {0}"; // $0 - application name
+        private static final String RESTART = "../cf restart {0}"; // $0 - application name
+        private static final String SCALE = "../cf scale {0} -i {1}"; // $0 - application name, $1 - No. instances
         private static final String PING = "https://{0}.{1}/{2}"; // $0 - application name, $1 - public domain, $2 - api
-        private static final String DELETE_APP = "./cf delete -r -f {0}"; // $0 - application name
+        private static final String DELETE_APP = "../cf delete -r -f {0}"; // $0 - application name
         private static final String DELETE_SERVICE = "./cf delete-service -f {0}"; // $0 - service name
-        private static final String LOGOUT = "./cf logout";
+        private static final String LOGOUT = "../cf logout";
     }
 }

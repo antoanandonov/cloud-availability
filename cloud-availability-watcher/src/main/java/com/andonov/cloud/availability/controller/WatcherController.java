@@ -46,7 +46,7 @@ public class WatcherController {
 
         cacheableService.login(credentials);
 
-        String response = Executor.exec("./cf v3-scale " + credentials.getAppName());
+        String response = Executor.exec("../cf v3-scale " + credentials.getAppName());
         Quota quota = resourceManager.checkHealthStatus(credentials.getAppName(), callbackDTO.getQuota(), response);
 
         return ResponseEntity.ok().body(quota);
